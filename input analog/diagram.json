@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Almaas Tristo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 58.2, "left": -128.4, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80.4,
+      "left": 99.8,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 152.3, "left": 278.2, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -99.2,
+      "left": 216.8,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "mega:3", "gray", [ "v76.8" ] ],
+    [ "pot1:GND", "mega:GND.3", "black", [ "v57.6", "h-249.6" ] ],
+    [ "pot1:SIG", "mega:A0", "cyan", [ "v86.4", "h-230.8" ] ],
+    [ "pot1:VCC", "mega:5V", "red", [ "v67.2", "h-0.8" ] ],
+    [ "lcd1:GND", "mega:GND.4", "black", [ "h-28.8", "v124.8", "h19.2", "v172.8" ] ],
+    [ "lcd1:VCC", "mega:5V.1", "red", [ "h-19.2", "v105.7", "h28.8" ] ],
+    [ "lcd1:SDA", "mega:20", "cyan", [ "h-48", "v105.8", "h28.8" ] ],
+    [ "lcd1:SCL", "mega:21", "yellow", [ "h-9.6", "v0.3" ] ],
+    [ "led1:C", "mega:GND.1", "black", [ "v76.8", "h-124.4" ] ]
+  ],
+  "dependencies": {}
+}
